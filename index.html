@@ -1,0 +1,63 @@
+---
+title: Home
+layout: homepage
+---
+<main>
+    <h1>Criamos sites:</h1>
+    <section class="cards">
+        <div class="intro">
+            <div>
+                <h1>Seguros</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem, sunt.</p>
+                <img src="" alt="">
+            </div>
+            <div>
+                <h1>Rápidos</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem, sunt.</p>
+                <img src="" alt="">
+            </div>
+        </div>
+        <div class="outro">
+            <h1>e Modernos</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <img src="" alt="">
+        </div>
+    </section>
+    <style>
+        section.reviews .card p:first-of-type {
+            display: flex;
+        }
+
+        section.reviews .card p:first-of-type::before,
+        section.reviews .card p:first-of-type::after {
+            font-size: 3rem
+        }
+
+        section.reviews .card p:first-of-type::before {
+            content: "\201C";
+        }
+
+        section.reviews .card p:first-of-type::after {
+            content: "\201D";
+        }
+    </style>
+    <section class="reviews">
+        <article class="card">
+            <img src="" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, assumenda.</p>
+            <p class="cargo">Lorem ipsum dolor sit.</p>
+        </article>
+        <article class="card">
+            <img src="" alt="">
+            <!-- BLOCKQUOTE &&&&& CITE TAGS -->
+            <p>Tempora sapiente consectetur aperiam repudiandae obcaecati perferendis in sunt facilis!</p>
+            <p class="cargo">Assumenda, impedit! Velit, quam.</p>
+        </article>
+        <article class="card">
+            <img src="" alt="">
+            <p>Nemo impedit voluptatem totam facere natus ipsam voluptates ratione assumenda.</p>
+            <p class="cargo">Praesentium facilis nesciunt cumque?</p>
+        </article>
+    </section>
+    <a href="" class="button">Contato</a>
+</main>

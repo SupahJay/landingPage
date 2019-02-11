@@ -1,0 +1,189 @@
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Quicksand Light'), local('Quicksand-Light'), url(https://fonts.gstatic.com/s/quicksand/v8/6xKodSZaM9iE8KbpRA_pgHYYT8L6.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Quicksand Regular'), local('Quicksand-Regular'), url(https://fonts.gstatic.com/s/quicksand/v8/6xKtdSZaM9iE8KbpRA_hK1QI.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Quicksand Medium'), local('Quicksand-Medium'), url(https://fonts.gstatic.com/s/quicksand/v8/6xKodSZaM9iE8KbpRA_p2HcYT8L6.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Quicksand Bold'), local('Quicksand-Bold'), url(https://fonts.gstatic.com/s/quicksand/v8/6xKodSZaM9iE8KbpRA_pkHEYT8L6.ttf) format('truetype');
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, "open sans";
+  font-size: 1.25rem;
+  color: #323232;
+}
+::selection {
+  background: #a48efc;
+  color: white;
+}
+h1 {
+  color: #7BED9F;
+  display: block;
+  font-size: 2.3em;
+  font-weight: normal;
+  font-family: Montserrat;
+}
+main > h1 {
+  text-align: center;
+}
+.button {
+  padding: 1rem 2.8rem;
+  width: min-content;
+  min-width: 200px;
+  text-align: center;
+  border-radius: 5px;
+  background: #987FFC;
+  color: white;
+  margin: auto;
+  text-decoration: none;
+  display: block;
+}
+.button.second {
+  background: white;
+  color: #7BED9F;
+}
+/*  Header  */
+.icon {
+  margin: 0 1rem;
+}
+.icon img {
+  height: 8vh;
+}
+.wayv {
+  width: 100%;
+  fill: #7BED9F;
+  vertical-align: top;
+  transform: translateY(-50px);
+  position: relative;
+  z-index: -1;
+}
+nav {
+  background: #7BED9F;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav a {
+  text-decoration: none;
+  color: white;
+  margin: 1rem;
+  font-family: Montserrat;
+  letter-spacing: 0.05rem;
+  font-variant-caps: all-small-caps;
+}
+/*    Main    */
+main {
+  margin: 10vh 0;
+}
+section.cards .intro {
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: wrap;
+  padding: 10vh 0;
+}
+section.cards .intro div {
+  min-height: 70vh;
+  min-width: 350px;
+  max-width: 32vw;
+  margin: 1rem;
+  box-shadow: 2px 2px 13px #0000002b;
+  background: white;
+  border-radius: 5px;
+  padding: 0 2rem 2rem;
+}
+section.cards .intro div:nth-of-type(1) {
+  transform: translateY(-45px);
+}
+section.cards .intro div p {
+  line-height: 1.4em;
+}
+section.cards .intro div img {
+  display: block;
+  height: 22vw;
+  width: 22vw;
+  margin: 10vh auto;
+  border-radius: 50%;
+  background: #dfdfdf;
+}
+section.cards .outro {
+  width: 80vw;
+  margin: auto;
+}
+section.cards .outro img {
+  display: block;
+  height: 80vh;
+  background: #dfdfdf;
+}
+section.cards .outro h1 {
+  line-height: 1em;
+}
+section.cards .outro h1,
+section.cards .outro p {
+  text-align: center;
+}
+section.cards .outro * {
+  margin: 1.5rem auto;
+}
+article.card {
+  box-shadow: 2px 2px 13px #0000002b;
+  min-width: 450px;
+  width: 48vw;
+  max-width: 800px;
+  text-align: center;
+  padding: 1rem;
+  margin: 10vh auto;
+  background-color: #ffffff;
+}
+article.card p {
+  font-family: quicksand;
+  font-weight: 500;
+}
+article.card img {
+  background: #7BED9F;
+  display: inline-block;
+  height: 85px;
+  width: 85px;
+  border-radius: 50%;
+}
+article.card .cargo {
+  font-size: 85%;
+  color: rgba(0, 0, 0, 0.5);
+}
+article.card * {
+  margin: 0.8rem;
+}
+/*  Footer  */
+.foo {
+  background: #a8f3c0;
+  height: 5vh;
+  display: block;
+}
+.foo + .foo {
+  background: #91f0af;
+  height: 8vh;
+}
+footer {
+  background: #7BED9F;
+  padding: 7vh 10vw;
+}

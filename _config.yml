@@ -1,0 +1,18 @@
+---
+title: Supah Jay.Github.Io
+timezone: UTC
+collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
+markdow: redcarpet
+exclude:
+- README.md
+- index2.html
+plugins:
+- jekyll-paginate
+paginate: 1
+paginate_path: "/preview/:num/"
