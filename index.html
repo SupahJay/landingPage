@@ -17,47 +17,41 @@ layout: homepage
                 <img src="" alt="">
             </div>
         </div>
-        <div class="outro">
+        <div class="outro align-center">
             <h1>e Modernos</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             <img src="" alt="">
         </div>
     </section>
-    <style>
-        section.reviews .card p:first-of-type {
-            display: flex;
-        }
-
-        section.reviews .card p:first-of-type::before,
-        section.reviews .card p:first-of-type::after {
-            font-size: 3rem
-        }
-
-        section.reviews .card p:first-of-type::before {
-            content: "\201C";
-        }
-
-        section.reviews .card p:first-of-type::after {
-            content: "\201D";
-        }
-    </style>
-    <section class="reviews">
-        <article class="card">
-            <img src="" alt="">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, assumenda.</p>
-            <p class="cargo">Lorem ipsum dolor sit.</p>
-        </article>
-        <article class="card">
-            <img src="" alt="">
-            <!-- BLOCKQUOTE &&&&& CITE TAGS -->
-            <p>Tempora sapiente consectetur aperiam repudiandae obcaecati perferendis in sunt facilis!</p>
-            <p class="cargo">Assumenda, impedit! Velit, quam.</p>
-        </article>
-        <article class="card">
-            <img src="" alt="">
-            <p>Nemo impedit voluptatem totam facere natus ipsam voluptates ratione assumenda.</p>
-            <p class="cargo">Praesentium facilis nesciunt cumque?</p>
-        </article>
+    {{%- if Reviews -%}
+     <section class="reviews">
+         {%- for review in Reviews -%}
+             code
+         {%- endfor -%}
+         <article class="card">
+             <img src="" alt="">
+             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, assumenda.</p>
+             <p class="cargo">Lorem ipsum dolor sit.</p>
+            </article>
+            <article class="card">
+                <img src="" alt="">
+                <!-- BLOCKQUOTE &&&&& CITE TAGS -->
+                <p>Tempora sapiente consectetur aperiam repudiandae obcaecati perferendis in sunt facilis!</p>
+                <p class="cargo">Assumenda, impedit! Velit, quam.</p>
+            </article>
+            <article class="card">
+                <img src="" alt="">
+                <p>Nemo impedit voluptatem totam facere natus ipsam voluptates ratione assumenda.</p>
+                <p class="cargo">Praesentium facilis nesciunt cumque?</p>
+            </article>
+        </section>
+    {%- else -%}
+    worked buddy
+    {%- endif -%}
+    els
+    <section class="align-center main">
+        <h1>Some heading here</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo mollitia ratione consectetur dignissimos quisquam culpa quos deleniti dolorum rem optio.</p>
+        <a href="./contact.html" class="button main">Contato</a>
     </section>
-    <a href="" class="button">Contato</a>
 </main>
