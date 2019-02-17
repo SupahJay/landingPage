@@ -23,13 +23,13 @@ layout: homepage
             <img src="" alt="">
         </div>
     </section>
-    {%- if Reviews != null -%}
-    <section class="reviews">
-        {%- for review in Reviews -%}
+    {%- if feedbacks != null -%}
+    <section class="feedbacks">
+        {%- for feedback in feedbacks -%}
         <article class="card">
-            <img src="" alt="">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, assumenda.</p>
-            <p class="cargo">Lorem ipsum dolor sit.</p>
+            <img src="{{feedback.image}}" alt="{{feedback.nome}}">
+            <p>{{feedback.text}}</p>
+            <p class="cargo">{{feedback.nome}}</p>
         </article>
         {%- endfor -%}
         <!-- BLOCKQUOTE &&&&& CITE TAGS -->
@@ -38,6 +38,6 @@ layout: homepage
     <section class="align-center main">
         <h1>Some heading here</h1>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo mollitia ratione consectetur dignissimos quisquam culpa quos deleniti dolorum rem optio.</p>
-        <a href="./contact.html" class="button main">Contato</a>
+        <a href="{{site.url}}" class="button main">Contato</a>
     </section>
 </main>

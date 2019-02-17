@@ -87,13 +87,21 @@ main {
 main section:nth-of-type(n+2) {
   margin: 25vh 0;
 }
+/**
+ * main.contact
+ * ||
+ * |-first
+ * -second(a.k.a others)
+ * 
+ * 
+ * */
 main.contact {
   display: flex;
   flex-grow: 0;
   justify-content: space-evenly;
   flex-flow: wrap;
 }
-main.contact * {
+main.contact > * {
   margin: 1rem;
   flex-grow: 2;
 }
@@ -107,16 +115,21 @@ main.contact span.vertical span {
   width: 2px;
   background: #987ffc;
 }
-main.contact .other-contact-methods {
-  padding: 1rem;
+.other-contact-methods {
   min-width: 40vw;
-  width: 200px;
+  min-width: calc(40vw + 25px);
+  width: 225px;
   max-width: 800px;
+  display: flex;
 }
-main.contact .other-contact-methods *:not(span) {
-  flex-grow: 2;
+.other-contact-methods div {
+  padding: 1rem;
+  height: fit-content;
+  align-self: center;
+  margin: auto;
+  padding-bottom: 15vh;
 }
-main.contact .other-contact-methods a {
+.other-contact-methods a {
   display: block;
   margin: 1em 0;
   color: #4c4c4c;
@@ -218,6 +231,8 @@ input,
 textarea {
   -webkit-appearance: button-bevel;
   border-radius: 5px;
+  font-family: Roboto;
+  font-size: 1rem;
   background: #ebebeb;
   width: 100%;
   width: -webkit-fill-available;
@@ -232,8 +247,10 @@ input.half {
 }
 form {
   min-width: 40vw;
+  min-width: calc(40vw + 0);
   width: 200px;
   max-width: 800px;
+  padding: 1rem;
 }
 form * {
   display: inline-block;

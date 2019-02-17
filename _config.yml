@@ -2,8 +2,8 @@
 title: Landing Page
 timezone: UTC
 collections:
-  Reviews:
-    title: Reviews
+  Feedback:
+    title: Feedback
     output: false
 markdow: redcarpet
 exclude:
