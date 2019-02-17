@@ -1,9 +1,14 @@
-    <header>
-        <nav>
-            <a href="" class="icon"><img src="{{site.url}}/Union.svg" alt=""></a>
-            <div>
-                <a href="">Contato</a>
-                <a href="">Sobre nós</a>
-                <!-- <a href=""></a> -->
-            </div>
-        </nav>
+<header>
+    <nav>
+        <a href="{{site.url}}" class="icon"><img src="{{site.url}}/Union.svg" alt=""></a>
+        <div>
+            <a href="{{site.url}}/contact">Contato</a>
+            <a href="{{site.url}}/about">Sobre nós</a>
+        </div>
+    </nav>
+    {%- if page.url == "/index.html" -%}
+    <svg class="wayv" viewBox="0 0 1440 645">
+        <path d="M0 0H1440V631C981.939 425.607 472.109 705.671 0 631V0Z"/>
+    </svg>
+    {%- endif -%}
+</header>
