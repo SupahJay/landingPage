@@ -15,7 +15,7 @@
 
         gtag('config', 'UA-134159711-1');
         </script>
-
+        <script src="https://cdn.jsdelivr.net/npm/swup@1.9.0/lib/index.js"></script>
         <style>
         #ep{
             height: 2px;
@@ -40,7 +40,7 @@
         <!-- <link href="https://fonts.googleapis.com/css?family=Raleway:300,regular,500,600,700,800" rel="stylesheet" /> -->
     </head>
     {%- include header.html -%}
-    <main class="{%- if page.main_class -%}{{page.main_class}}{%- endif -%}">
+    <main id="swup" class="{%- if page.main_class -%}{{page.main_class}}{%- endif -%}">
         {{content}}
     </main>
     {%- include footer.html -%}
@@ -49,11 +49,12 @@
             nav.classList.remove("no-js_shame_on_you")
             nav.innerHTML+="<span id=\"ep\"></span>";
             var ep = document.querySelector("#ep");
-            underNav( parseInt( "{{ page.number }}" ) - 1 );
+            underNav( parseInt( "{{ page.num }}" ) - 1 );
         function underNav(num){
             navItems=nav.querySelectorAll("a");
             ep.style.marginLeft = navItems[num].getBoundingClientRect().left - nav.getBoundingClientRect().left + "px";
             ep.style.width = navItems[num].offsetWidth + "px";
         };
+        const swup = new Swup({cache: true,preload: true}); 
     </script>
 </html>
