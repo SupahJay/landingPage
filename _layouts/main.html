@@ -35,20 +35,6 @@
             right:0
         }
         </style>
-        <script>
-        window.onload=function(){
-            var nav=document.querySelector(".js-nav");
-            nav.classList.remove("no-js_shame_on_you")
-            nav.innerHTML+="<span id=\"ep\"></span>";
-            var ep = document.querySelector("#ep");
-            underNav( parseInt( "{{ page.number }}" ) - 1 );
-        }
-        function underNav(num){
-            navItems=nav.querySelectorAll("a");
-            ep.style.marginLeft = navItems[num].getBoundingClientRect().left - nav.getBoundingClientRect().left + "px";
-            ep.style.width = navItems[num].offsetWidth + "px";
-        };
-        </script>
         <script src="{{site.url}}/main.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto:300,400|Quicksand:500" rel="stylesheet">
         <!-- <link href="https://fonts.googleapis.com/css?family=Raleway:300,regular,500,600,700,800" rel="stylesheet" /> -->
@@ -58,4 +44,16 @@
         {{content}}
     </main>
     {%- include footer.html -%}
+    <script>
+            var nav=document.querySelector(".js-nav");
+            nav.classList.remove("no-js_shame_on_you")
+            nav.innerHTML+="<span id=\"ep\"></span>";
+            var ep = document.querySelector("#ep");
+            underNav( parseInt( "{{ page.number }}" ) - 1 );
+        function underNav(num){
+            navItems=nav.querySelectorAll("a");
+            ep.style.marginLeft = navItems[num].getBoundingClientRect().left - nav.getBoundingClientRect().left + "px";
+            ep.style.width = navItems[num].offsetWidth + "px";
+        };
+    </script>
 </html>
