@@ -41,7 +41,7 @@
             nav.classList.remove("no-js_shame_on_you")
             nav.innerHTML+="<span id=\"ep\"></span>";
             var ep = document.querySelector("#ep");
-            underNav( parseInt({{ page.number }}) - 1 );
+            underNav( parseInt( "{{ page.number }}" ) - 1 );
         }
         function underNav(num){
             navItems=nav.querySelectorAll("a");
