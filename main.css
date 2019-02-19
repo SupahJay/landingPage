@@ -95,22 +95,22 @@ main section:nth-of-type(n+2) {
  * 
  * 
  * */
-main div.contact {
+main.contact {
   display: flex;
   flex-grow: 0;
   justify-content: space-evenly;
   flex-flow: wrap;
 }
-main div.contact > * {
+main.contact > * {
   margin: 1rem;
   flex-grow: 2;
 }
-main div.contact span.vertical {
+main.contact span.vertical {
   display: flex;
   flex-flow: column;
   align-items: center;
 }
-main div.contact span.vertical span {
+main.contact span.vertical span {
   flex-grow: 2;
   width: 2px;
   background: #987ffc;
