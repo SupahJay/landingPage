@@ -34,20 +34,15 @@
             left:0;
             right:0
         }
-        .transition-fade {
-            transition: .4s;
-            opacity: 1;
-        }
-        html.is-animating .transition-fade{
-            opacity: 0;
-        }
+
         </style>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/barba.js/1.0.0/barba.min.js" type="text/javascript"></script>
         <script src="{{site.url}}/main.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto:300,400|Quicksand:500" rel="stylesheet">
         <!-- <link href="https://fonts.googleapis.com/css?family=Raleway:300,regular,500,600,700,800" rel="stylesheet" /> -->
     </head>
     {%- include header.html -%}
-    <main id="swup" class="transition-fade &#32; {%- if page.main_class -%} {{ page.main_class }} {%- endif -%}">
+    <main class="&#32; {%- if page.main_class -%} {{ page.main_class }} {%- endif -%}">
         {{content}}
     </main>
     {%- include footer.html -%}
@@ -62,6 +57,6 @@
             ep.style.marginLeft = navItems[num].getBoundingClientRect().left - nav.getBoundingClientRect().left + "px";
             ep.style.width = navItems[num].offsetWidth + "px";
         };
-        const swup = new Swup({debugMode:true}); 
+        Barba.Pjax.start();
     </script>
 </html>
