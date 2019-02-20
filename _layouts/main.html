@@ -70,7 +70,7 @@
         Barba.Dispatcher.on('initStateChange', function(a) {
         //var path = (window.location.href).replace(window.location.origin, '').toLowerCase();
         console.log(a.url)
-        underNav( pos[a.url].replace(window.location.origin + "/", '').toLowerCase() )
+        underNav( pos[a.url.replace(window.location.origin + "/", '').toLowerCase()] )
         gtag('js', new Date());
         gtag('config', 'UA-134159711-1');
         });
