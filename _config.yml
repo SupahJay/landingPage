@@ -5,11 +5,13 @@ collections:
   Feedback:
     title: Feedback
     output: false
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
 markdow: redcarpet
 exclude:
 - readme.md
 - x.html
-# plugins:
-# - jekyll-paginate
-# paginate: 1
-# paginate_path: "/preview/:num/"
