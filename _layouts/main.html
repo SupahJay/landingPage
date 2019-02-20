@@ -51,6 +51,11 @@
         </div>
     </div>
     <script>
+            var pos={
+                "":0,
+                contact:1,
+                about:2
+            }
             var nav=document.querySelector(".js-nav");
             nav.classList.remove("no-js_shame_on_you")
             nav.innerHTML+="<span id=\"ep\"></span>";
@@ -62,5 +67,13 @@
             ep.style.width = navItems[num].offsetWidth + "px";
         };
         Barba.Pjax.start();
+        Barba.Dispatcher.on('initStateChange', function(a) {
+        //var path = (window.location.href).replace(window.location.origin, '').toLowerCase();
+        console.log(a.url)
+        underNav( pos[a.url].replace(window.location.origin + "/", '').toLowerCase() )
+        gtag('js', new Date());
+        gtag('config', 'UA-134159711-1');
+        });
+
     </script>
 </html>
