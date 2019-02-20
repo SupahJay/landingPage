@@ -72,7 +72,7 @@ nav .icon img {
   margin: 0 1rem;
   height: 8vh;
 }
-header .wayv {
+header + .wayv {
   width: 100%;
   fill: #7bed9f;
   vertical-align: top;
