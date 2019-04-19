@@ -1,0 +1,51 @@
+/**
+ * old
+ * Logic:
+ * First GULP.Default is run:
+ * -It calls WLESS(watch less), that will turn less into css.
+ * -then SYNC, that will wait for any change to reload the server.
+ * 
+ */
+ 
+rename({
+    dirname: "main/text/ciao",
+    basename: "aloha",
+    prefix: "bonjour-",
+    suffix: "-hola",
+    extname: ".md"
+  })
+
+ /*
+ -A watcher will run even standing by himself wherever it stands
+ 
+ 
+ */
+global watch
+var watcher = gulp.watch('*.less', gulp.parallel('default'));
+watcher.on('change', function(path, stats) {
+console.log('File ' + path + ' was changed.' + stats);
+});
+
+TASK WATCH
+gulp.task("watch",()=>{
+
+basic need
+    gulp.watch('*.less',  gulp.series(["default"]))
+
+extras:= data to console.log
+    .on('change', function(path,stats) {
+        console.log('File ' + path + ' was changed')
+      })
+})
+       short
+gulp.task('watch', () =>
+    gulp.watch('*.less', gulp.parallel('default'))
+)
+
+export??/
+function defaultTask(cb) {
+    console.log("lolz")
+    cb();
+  }
+
+  exports.default = defaultTask

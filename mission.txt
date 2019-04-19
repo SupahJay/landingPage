@@ -1,0 +1,20 @@
+1 - finish the website
+    write content
+
+
+DESKTOP-QEOJOPC	80:A5:89:E4:C5:96	
+
+android-427d6f1828f00d4a	FC:64:3A:52:E5:32
+
+android-6c19f79cc6257e66	38:94:96:72:E9:D4
+
+
+Hostname: DESKTOP-QEOJOPC
+MAC: 80:A5:89:E4:C5:96
+IP: 192.168.15.2
+Hostname: android-427d6f1828f00d4a
+MAC: FC:64:3A:52:E5:32
+IP: 192.168.15.3
+Hostname: android-6c19f79cc6257e66
+MAC: 38:94:96:72:E9:D4
+IP: 192.168.15.4

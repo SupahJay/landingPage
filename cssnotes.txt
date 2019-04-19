@@ -1,0 +1,47 @@
+- Layers of itcss:
+
+1 - Vendor - files for third party code. At the top to be the most easily overridden
+2 - Settings — preprocessors, fonts, variables (doesn’t generate any style output)
+3 - Tools — mixins, functions (doesn’t generate any style output)
+
+4 - Generic — resets or normalizing files
+  - Objects – Classes for page structure typically following the OOCSS methodology
+5 - Elements — bare HTML elements (H1, a, p, etc…) {Generic could be here!}
+
+6 - Components — Majority of code goes here to style specific UI components
+7 - Utilities/Helpers/Trumps — utilities and helper classes that have the most authority (show/hide, color helpers, etc…)
+
+Note: these categories can be used as folder, thus using many css files with close logic within em all
+
+RSS
+Components will be named with at least two words, with a dash between each word.(.like-button, .like-button, .article-card)
+- so it can get very simple to understain
+- Mine current naming convention is to name a class with only one word, thus making it interact with the tag and others classes and create meaning fom it : section.main, input.search, p.center
+- might two words make my code more logical? 🤔🤔🤔
+
+.like-button {
+  &.-wide { /* ... */ }
+  &.-short { /* ... */ }
+  &.-disabled { /* ... */ }
+}
+
+Elements are things inside your component.
+Each component may have elements. They should have classes that are only one word.
+
+They said is ok to use margin and stuff inside components but not on the component itself
+so you could set a margin of a component inside a component. but not on the default one
+
+they say to use a file for component and import it by using wildcards(components/*)
+
+they say to avoid two level nesting w/ the preprocessor. if you wanna go deeper write it yourself
+
+/* ✓ Better: 2 levels */
+.image-frame {
+  > .description { /* ... */ }
+  > .description > .icon { /* ... */ }
+}
+
+they say child selector is safer
+
+_helpers/modifiers
+

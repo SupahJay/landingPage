@@ -1,0 +1,388 @@
+@LESS_STUFF: a;
+@brand-1: #7bed9f;
+@brand-2: #987ffc;
+@utility-1: black;
+@utility-2: black;
+@white: white;
+@fill-black: #4c4c4c; // #323232;
+@fill-black-light: #757575;
+
+//idea= .fallback()
+//put fallback inside anything and if the value is very modern the fallback will create fallbacks with the second paramether
+@fonts: {
+    first: Montserrat;
+    second: Roboto;
+    third: quicksand;
+}
+
+@font-location: {
+    nav: @fonts[second];
+    body: @fonts[second];
+    h1: @fonts[first];
+    comments: @fonts[third];
+    button: @fonts[first];
+    input:@fonts[second]
+}
+
+@radius: 5px;
+
+.shadow(@tilt: 0) {
+    box-shadow: unit(@tilt, px) 4px 10px #00182120; //2px 2px 13px #0000002b;
+}
+
+.round() {
+    border-radius: 50%;
+}
+
+.square(@width) {
+    height: @width;
+    width: @width;
+}
+
+.form_width(@width: 0) {
+    min-width: 40vw;
+    min-width: calc(40vw + @width);
+    width: 200px + @width;
+    max-width: 800px;
+}
+
+@GENERAL: g;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: @font-location[body];
+    font-size: 1.25rem;
+    color: @fill-black;
+}
+
+.align-center {
+    text-align: center;
+}
+
+::selection {
+    background: lighten(@brand-2, 3%);
+    color: white;
+}
+
+h1 {
+    color: @brand-1;
+    display: block;
+    font-size: 2.3em;
+    font-weight: normal;
+    font-family: @font-location[h1];
+
+    main>& {
+        text-align: center;
+    }
+}
+
+.button {
+    padding: 1rem 2.8rem;
+    width: fit-content;
+    -webkit-appearance: none;
+    border: 0;
+    min-width: 200px;
+    text-align: center;
+    border-radius: @radius;
+    background: @brand-2;
+    color: @white;
+    margin: auto;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+    font-family: @font-location[button];
+
+    &.main {
+        padding: 1.13rem 4.35rem;
+        //font-weight:bold;
+        font-size: 1.75rem
+    }
+
+    &.second {
+        background: @white;
+        color: @brand-1;
+    }
+}
+
+@HEADER: s;
+/*  Header  */
+
+nav {
+    background: @brand-1;
+    padding: .5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
+        text-decoration: none;
+        color: @white;
+        margin: 1rem;
+        font-family: @font-location[nav];
+        //font-size: .95em;
+        //letter-spacing: .05rem;
+        //font-variant-caps: all-small-caps;
+        text-transform: uppercase;
+        font-size: 90%;
+    }
+
+    .icon {
+        margin: 0;
+
+        img {
+            margin: 0 1rem;
+            height: 8vh;
+        }
+    }
+}
+
+.wayv {
+    width: 100%;
+    fill: @brand-1;
+    vertical-align: top;
+    transform: translateY(-50px);
+    position: relative;
+    z-index: -1;
+}
+
+@MAIN: a;
+
+/*    Main    */
+main {
+    margin: 10vh 0;
+}
+
+main section:nth-of-type(n+2) {
+    margin: 25vh 0;
+}
+
+/**
+ * main.contact
+ * ||
+ * |-first
+ * -second(a.k.a others)
+ * 
+ * 
+ * */
+main.contact {
+    display: flex;
+    flex-grow: 0;
+    justify-content: space-evenly;
+    flex-flow: wrap;
+
+    >* {
+        //both sides
+        margin: 1rem;
+        flex-grow: 2;
+    }
+
+    // span{
+    //     margin: 1rem 2vmax
+    // }
+    span.vertical {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+
+        span {
+            flex-grow: 2;
+            width: 2px;
+            background: @brand-2
+        }
+    }
+
+}
+
+.other-contact-methods {
+    .form_width(25px);
+    display: flex;
+
+    div {
+        padding: 1rem;
+        height: fit-content;
+        align-self: center;
+        margin:auto;
+        padding-bottom: 15vh
+    }
+
+    a {
+        display: block;
+        margin: 1em 0;
+        color: @fill-black;
+        text-decoration: none
+    }
+}
+
+section.cards {
+    .intro {
+        display: flex;
+        justify-content: space-evenly;
+        flex-flow: wrap;
+        padding: 10vh 0;
+
+        div {
+            min-height: 70vh;
+            min-width: 350px;
+            max-width: 32vw;
+            margin: 1rem;
+            .shadow(1);
+            background: white;
+            border-radius: @radius;
+            padding: 0 2rem 2rem;
+
+            &:nth-of-type(1) {
+                transform: translateY(-45px);
+            }
+
+            p {
+                line-height: 1.3em;
+            }
+
+            img {
+                display: block;
+                .square(22vw);
+                margin: 10vh auto;
+                .round();
+                background: #dfdfdf;
+            }
+        }
+    }
+
+    .outro {
+        width: 80vw;
+        margin: auto;
+
+        img {
+            display: block;
+            height: 80vh;
+            background: #dfdfdf;
+        }
+
+        h1 {
+            line-height: 1em;
+        }
+
+        * {
+            margin: 1.5rem auto;
+        }
+    }
+}
+
+article.card {
+    .shadow();
+    min-width: 450px;
+    width: 48vw;
+    max-width: 800px;
+    text-align: center;
+    padding: 1rem;
+    margin: 10vh auto;
+    background-color: #ffffff;
+
+    p {
+        font-family: @font-location[comments];
+        font-weight: 500;
+    }
+
+    img {
+        background: @brand-1;
+        display: inline-block;
+        .square(calc(5rem + 1vmax));
+        //.square(8vmax);
+        .round();
+    }
+
+    .cargo {
+        font-size: 85%;
+        color: @fill-black-light;
+    }
+
+    * {
+        margin: .8rem;
+    }
+}
+
+section.reviews {
+    .card {
+        p:first-of-type {
+            display: flex;
+
+            &::before {
+                font-size: 3rem;
+                content: "\201C";
+            }
+
+            &::after {
+                font-size: 3rem;
+                content: "\201D";
+            }
+        }
+    }
+}
+
+section.main {
+    h1 {
+        color: black;
+    }
+
+    p {
+        width: 40vw;
+        min-width: 500px;
+        margin: 2rem auto;
+        // display: none;
+    }
+}
+
+input,
+textarea {
+    -webkit-appearance: button-bevel;
+    border-radius: 5px;
+    font-family: @font-location[input];
+    font-size: 1rem;
+    background: #ebebeb;
+    width: 100%;
+    width: -webkit-fill-available;
+
+    padding: .5rem;
+    margin-bottom: 18px;
+}
+
+input {
+    height: 2.5rem;
+
+    &.half {
+        width: 49.5%
+    }
+}
+
+form {
+    .form_width();
+    padding:1rem;
+    * {
+        display: inline-block
+    }
+}
+
+//input:valid + input:valid + textarea:valid + button
+@FOOTER: f;
+
+/*  Footer  */
+.foo {
+    background: fadeout(@brand-1, 55%);
+    height: 4vh;
+    display: block;
+
+    &+& {
+        background: fadeout(@brand-1, 25%);
+        height: 3vh;
+    }
+}
+
+footer {
+    background: @brand-1;
+    padding: 7vh 10vw;
+}
