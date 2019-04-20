@@ -1,47 +1,15 @@
----
-title: Home
-layout: main
-footer: none
-footer_button: Click aqui...
-num: 1
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test</title>
+</head>
+<body>
+    
 
-<h1>Site em construção<h1>
-  <p>Está online porque tem que ser compilado pelo GitHub pages. :/</p>
-<h1>Criamos sites:</h1>
-<section class="cards">
-    <div class="intro">
-        <div>
-            <h1>Seguros</h1>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem, sunt.</p>
-            <img src="" alt="">
-        </div>
-        <div>
-            <h1>Rápidos</h1>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem, sunt.</p>
-            <img src="" alt="">
-        </div>
-    </div>
-    <div class="outro align-center">
-        <h1>e Modernos</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <img src="" alt="">
-    </div>
-</section>
-{%- if feedbacks != null -%}
-<section class="feedbacks">
-    {%- for feedback in feedbacks -%}
-    <article class="card">
-        <img src="{{feedback.image}}" alt="{{feedback.nome}}">
-        <p>{{feedback.text}}</p>
-        <p class="cargo">{{feedback.nome}}</p>
-    </article>
-    {%- endfor -%}
-    <!-- BLOCKQUOTE &&&&& CITE TAGS -->
-</section>
-{%- endif -%}
-<section class="align-center main">
-    <h1>Some heading here</h1>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo mollitia ratione consectetur dignissimos quisquam culpa quos deleniti dolorum rem optio.</p>
-    <a href="{{site.url}}" class="button main">Contato</a>
-</section>
+    {% include 'footer.html' %} 
+
+</body>
+</html>
