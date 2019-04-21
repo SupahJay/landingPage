@@ -1,16 +1,11 @@
 ---
 title: Landing Page
 timezone: UTC
+collections_dir: content
 collections:
-  Feedback:
-    title: Feedback
+  projects:
+    title: Projects
     output: false
-  posts:
-    title: Posts
-    output: true
-  uploads:
-    title: Uploads
-    output: true
 markdow: redcarpet
 exclude:
 - readme.md
