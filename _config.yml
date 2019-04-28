@@ -11,7 +11,6 @@ collections:
   uploads:
     title: Uploads
     output: true
-source: jekyll
 collections_dir: content
 markdow: redcarpet
 exclude:
