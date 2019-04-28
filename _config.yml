@@ -16,3 +16,4 @@ markdow: redcarpet
 exclude:
 - readme.md
 - x.html
+- includes
