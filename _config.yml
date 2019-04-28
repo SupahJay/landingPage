@@ -1,6 +1,8 @@
 ---
 title: Landing Page
 timezone: UTC
+source: jekyll
+collections_dir: content
 collections:
   posts:
     title: Posts
@@ -11,7 +13,6 @@ collections:
   uploads:
     title: Uploads
     output: true
-source: jekyll
 collections_dir: content
 markdow: redcarpet
 exclude:
