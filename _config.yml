@@ -1,6 +1,7 @@
 ---
 title: Landing Page
 timezone: UTC
+source: jekyll
 collections_dir: content
 collections:
   projects:
