@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var less = require('gulp-less');
 var rename = require("gulp-rename");
 var csso = require('gulp-csso');
+var beauty = require('gulp-html-beautify');
 var path = require('path');
 var pug = require('gulp-pug');
 var glob = require('glob');
@@ -34,7 +35,7 @@ gulp.task('wless', (done) => {
 });
 
 gulp.task('pug',(done)=>{
-	gulp.watch( '*.pug', ()=>{return gulp.src('*.pug').pipe(pug()).pipe(gulp.dest('./'))});
+	gulp.watch( '*.pug', ()=>{return gulp.src('*.pug').pipe(pug()).pipe(beauty()).pipe(gulp.dest('./'))});
 	done()
 })
 
