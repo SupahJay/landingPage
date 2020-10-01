@@ -1,15 +1,26 @@
----
----
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
+  <title>Full Stack Conf</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 </head>
-
-<body>{% for project in site.projects %}<p>{{project.lold}}</p>{% endfor %}</body>
-
+<body class="bg-info text-white">
+  <div class="container text-center">
+    <h1 class="display-1 mt-5">Full Stack Conf</h1>
+    <p class="lead mb-5">Coming Soon, a One-day Conference About All Things Javascript!</p>
+    <div class="input-group mb-3 mx-auto">
+      <input type="text" class="form-control" id="name" placeholder="Enter your Full Name" aria-label="Enter your Full Name" aria-describedby="basic-addon2">
+      <input type="email" class="form-control" id="email" placeholder="Enter your email for info" aria-label="Enter your email for info" aria-describedby="basic-addon2">
+      <input type="text" class="form-control" id="phone" placeholder="Enter your Mobile No" aria-label="Enter your Full Name" aria-describedby="basic-addon2">
+    </div>
+    <div class="input-group-append ">
+        <button class="btn btn-primary" type="button" onclick="return ValidateForm();">Sign Up</button>
+      </div>
+  </div>
+</body>
 </html>
